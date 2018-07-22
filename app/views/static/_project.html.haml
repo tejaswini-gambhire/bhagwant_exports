@@ -1,0 +1,27 @@
+
+.blog-item.no-padding-bottom
+  %button.close{"data-dismiss" => "modal", :type => "button"} ×
+  .row
+    .col-sm-12
+      %center
+        %h1.pull-left.open-sans-light
+          = link_to product[:title], product[:url], target: '_blank', id: 'current-title-link', class: "open-sans-light"
+.container
+  .row
+    .col-lg-12
+      .row
+        .col-lg-2
+        .col-lg-8
+          .blog-img.well
+            %a{href: product[:url], target: '_blank', id: 'current-product-url'}
+              = image_tag "portfolio/#{product[:image]}", alt: "Screenshot of #{product[:title]}" , id: 'current-poduct-image'
+
+
+      .row
+        .col-md-12
+          %p{id: 'current-description'}= raw product[:description]
+          .blog-side-item
+            %strong.tags
+              - if product[:case_study]
+                %ul.list-unstyled.tagg
+                  %li= link_to "Case study", product[:case_study], target: "_blank", id: 'current-case-study'

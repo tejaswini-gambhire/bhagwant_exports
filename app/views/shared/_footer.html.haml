@@ -1,0 +1,46 @@
+%footer.footer
+  .container
+    .row
+      .col-lg-3.col-sm-3
+        %h1 Bhagwant Export
+        .footer_data
+          %dl
+            %dd
+              3810/01/12, Datta Nagar,
+              %br/
+              Barshi, Solapur - 413401,
+              %br/
+              Maharashtra, India.
+      .col-lg-6.col-sm-6
+      .col-lg-3.col-sm-3
+        .container
+          .row
+            %h1 stay connected
+            %ul.social-link-footer.list-unstyled
+              %li
+                %a{:href => "#", target: "_blank", alt: 'Facebook', class: 'social-rounded-icon'}
+                  %i.icon-facebook
+              %li
+                %a{:href => "#", target: "_blank", alt: 'Twitter', class: 'social-rounded-icon'}
+                  %i.icon-twitter
+              %li
+                %a{:href => "#", target: "_blank", alt: 'Linked In',
+                class: 'social-rounded-icon'}
+                  %i.icon-linkedin
+              %li
+                %a{:href => "#", target: "_blank", alt: 'Github', class: 'social-rounded-icon'}
+                  %i.icon-instagram
+
+    %br
+    .row
+      .text-center.footer_nav_links
+        = link_to 'Home', root_path
+        |
+        = link_to 'Our Products', 'portfolio'
+        |
+        = link_to 'Contact Us', 'contact-us'
+        |
+        = link_to 'About Us', 'about-us'
+    .row
+      .copyright.text-center
+        Copyright © Bhagwant Export

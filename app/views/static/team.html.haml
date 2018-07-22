@@ -1,0 +1,12 @@
+= javascript_include_tag 'team'
+= render 'shared/breadcrumbs', data: nil
+.container
+  .row
+    .text-center.feature-head
+      %h1 Meet Our Team
+    #members_data
+      %center= image_tag "icon_loading.gif", id: "loading_team";
+    = render "team"
+
+:javascript
+  var intranet_url = '#{INTRANET_URL}'

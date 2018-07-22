@@ -1,0 +1,55 @@
+#bannerCarousel.carousel.slide{"data-ride" => "carousel"}
+  .height-480
+    .jumbotron.text-center
+      %h1
+        %span.text-bold> Real
+        Quality
+        %small farm-grown products
+      %p.big
+        We can call ourselves the innovators in this business. And these are not just words. They have
+        %br.visible-xl-inline/
+        solid background. You can find real proof reading more about our company.
+      .btn-group-variant
+        %a.btn.btn-default.round-xl.btn-sm{:href => "#"} SEE ALL PRODUCTS
+        %a.btn.btn-default.round-xl.btn-sm{:href => "#"} ABOUT US
+
+%section.deal-of-day
+  .container
+    .row
+      .col-lg-6.col-lg-offset-3.text-center
+        %h1 Our Products
+        %p.lead
+          We offer 100% organic, natural and best quality products.
+    .row.offset-1.flow-offset-2
+      .col-sm-12.col-md-3
+        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
+          .caption
+            %h6.text-uppercase.letter-spacing-1 custard apple
+          = image_tag "portfolio/custard-apple.jpg", alt: "custard apple", id: 'current-poject-image', class: 'products'
+      .col-sm-12.col-md-3
+        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
+          .caption
+            %h6.text-uppercase.letter-spacing-1 pomegranate
+          = image_tag "portfolio/pomegranate.jpg", alt: "pomegranate", id: 'current-poject-image', class: 'products'
+      .col-sm-12.col-md-3
+        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
+          .caption
+            %h6.text-uppercase.letter-spacing-1 drumstick
+          = image_tag "portfolio/drumstick.jpg", alt: "drumstick", id: 'current-poject-image', class: 'products'
+      .col-sm-12.col-md-3
+        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
+          .caption
+            %h6.text-uppercase.letter-spacing-1 onion
+          = image_tag "portfolio/onion.png", alt: "onion", id: 'current-poject-image', class: 'products'
+%section.well-inset-2.text-center.bg-image.bg-image-4.core-values
+  .jumbotron.jumbotron--mod-1
+    .container
+      %h1
+        %span.text-bold Core
+        Values
+        %small Our mission is profitable growth through superior customer service, innovation, quality and commitment.
+      .btn-group-variant.no-offset
+        %a.btn.btn-default.round-xl.btn-sm{:href => "#"} Learn more
+        %a.btn.btn-default.round-xl.btn-sm{:href => "#"} Contact us
+
+

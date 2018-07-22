@@ -1,0 +1,69 @@
+= render 'shared/breadcrumbs', data: nil
+.container
+  .row.flow-offset-1
+    .col-md-4.text-center.text-md-left
+      %address.contact-block.inset-sm-min-2.text-left
+        %dl
+          %dt.h4 Bhagwant Export
+          %dt.h6 ADDRESS
+          %dd
+            3810/01/12, Datta Nagar,
+            %br/
+            Barshi, Solapur - 413401,
+            %br/
+            Maharashtra, India.
+          %dt.h6 WE ARE OPEN
+          %dd Open hours: 8.00-20.00
+          %dt.h6 PHONE
+          %dd
+            %a{:href => "callto:#"} +91-9403867440  
+          %dt.h6 E-MAIL
+          %dd
+            %a{:href => "mailto:bhagwantexports@gmail.com"} bhagwantexports@gmail.com
+        %ul.list-inline.list-inline-3
+          %li
+            %a.material-design-facebook56{:href => "#"}
+          %li
+            %a.material-design-google119{:href => "#"}
+          %li
+            %a.material-design-twitter47{:href => "#"}
+    .col-md-8.well-sm.btn-shadow.inset-sm-min.bg-white.round-large
+      %h4 Send an Enquiry
+      .contact-form
+        = form_for @contact, url: contact_us_path, method: :post do |f|
+          = f.hidden_field :ip
+          = f.hidden_field :location
+          .row
+            .form-group.col-sm-6
+              %label{:for => "name"} Name
+              = f.text_field :name, class: "form-control #{any_errors(@contact, 'name')}", id: 'name', placeholder: 'Enter your name'
+            .form-group.col-sm-6
+              %label{:for => "email"} Email
+              = f.text_field :email, class: "form-control #{any_errors(@contact, 'email')}", id: 'email', placeholder: 'Enter your email address'
+          .row
+            .form-group.col-sm-6
+              %label{:for => "website"} Website
+              = f.text_field :website, class: "form-control #{any_errors(@contact, 'website')}", id: 'name', placeholder: 'Enter your website'
+            .form-group.col-sm-6
+              %label{:for => "company"} Company Name
+              = f.text_field :company, class: "form-control #{any_errors(@contact, 'company')}", id: 'email', placeholder: 'Enter your company name'
+          .row
+            .form-group.col-sm-6
+              %label{:for => "phone"} Phone
+              = f.text_field :phone, class: "form-control #{any_errors(@contact, 'phone')}", id: 'phone', placeholder: 'Enter your phone number'
+            .form-group.col-sm-6
+              %label{:for => "skype_id"} Skype ID
+              = f.text_field :skype_id, class: "form-control #{any_errors(@contact, 'skype_id')}", id: 'skype_id', placeholder: 'Enter your Skype ID'
+          .row
+            .form-group.col-sm-12
+              %label{:for => "phone"} Message
+              = f.text_area :message, class: "form-control #{any_errors(@contact, 'message')}", rows: '7'
+            / .form-group
+            /   = recaptcha_tags :display => {:theme => 'white'}
+            /   - if @contact.errors[:recaptcha]
+            /     %span.has-error
+            /       %label.control-label= @contact.errors[:recaptcha].join(' ')
+          .row
+            .form-group.col-sm-6
+              = f.submit 'Submit', class: 'btn btn-success btn-lg center'
+

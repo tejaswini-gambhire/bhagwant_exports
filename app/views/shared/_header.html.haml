@@ -1,0 +1,24 @@
+%header.header-frontend
+  .navbar.navbar-default.navbar-static-top
+    .container
+      .navbar-header
+        %button.navbar-toggle{"data-target" => ".navbar-collapse", "data-toggle" => "collapse", :type => "button"}
+          %span.icon-bar
+          %span.icon-bar
+          %span.icon-bar
+        .row{:style => "margin-top: 0px;"}
+          %a.navbar-brand.pull-left{:href => root_path}
+            = image_tag 'logo2.png', alt: 'Bhagwant Export'
+      .navbar-collapse.collapse
+        %ul.nav.navbar-nav
+          %li{class: "#{check_if_active('/')}"}
+            = link_to 'Home', root_path
+
+          %li{class: "#{check_if_active('/portfolio')}"}
+            = link_to 'Our Products', portfolio_path
+
+          %li{class: "#{check_if_active('/contact-us')} "}
+            = link_to 'Contact Us', new_contact_path
+
+          %li{class: "#{check_if_active('/open-source')}"}
+            = link_to 'About Us', about_us_path

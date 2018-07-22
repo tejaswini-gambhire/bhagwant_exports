@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+%html
+  %head
+    %title #{@title}
+    %meta{charset: "utf-8"}/
+    %meta{content: "width=device-width, initial-scale=1.0", name: "viewport"}/
+    %meta{:name => "keywords", :content => "#{@keywords || 'Bhagwant Export'}"}
+    %meta{:name => "description", :content => "#{@description || 'Bhagwant Export'}"}
+
+    = stylesheet_link_tag    "application"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
+  %body
+    .page
+      = render 'shared/header'
+      = yield
+      = render 'shared/footer'
