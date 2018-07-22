@@ -10,8 +10,8 @@
         %br.visible-xl-inline/
         solid background. You can find real proof reading more about our company.
       .btn-group-variant
-        %a.btn.btn-default.round-xl.btn-sm{:href => "#"} SEE ALL PRODUCTS
-        %a.btn.btn-default.round-xl.btn-sm{:href => "#"} ABOUT US
+        %a.btn.btn-default.round-xl.btn-sm{ :href => portfolio_path } SEE ALL PRODUCTS
+        %a.btn.btn-default.round-xl.btn-sm{ :href => about_us_path } ABOUT US
 
 %section.deal-of-day
   .container
@@ -21,26 +21,12 @@
         %p.lead
           We offer 100% organic, natural and best quality products.
     .row.offset-1.flow-offset-2
-      .col-sm-12.col-md-3
-        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
-          .caption
-            %h6.text-uppercase.letter-spacing-1 custard apple
-          = image_tag "portfolio/custard-apple.jpg", alt: "custard apple", id: 'current-poject-image', class: 'products'
-      .col-sm-12.col-md-3
-        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
-          .caption
-            %h6.text-uppercase.letter-spacing-1 pomegranate
-          = image_tag "portfolio/pomegranate.jpg", alt: "pomegranate", id: 'current-poject-image', class: 'products'
-      .col-sm-12.col-md-3
-        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
-          .caption
-            %h6.text-uppercase.letter-spacing-1 drumstick
-          = image_tag "portfolio/drumstick.jpg", alt: "drumstick", id: 'current-poject-image', class: 'products'
-      .col-sm-12.col-md-3
-        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
-          .caption
-            %h6.text-uppercase.letter-spacing-1 onion
-          = image_tag "portfolio/onion.png", alt: "onion", id: 'current-poject-image', class: 'products'
+      - @products.each do |product|
+        .col-sm-12.col-md-4.product-image
+          .thumbnail.thumbnail-4.pricing-box.pricing-box-2
+            .caption
+              %h6.text-uppercase.letter-spacing-1= product[:title]
+            = image_tag "portfolio/#{product[:image]}", alt: "#{product[:title]}", id: 'current-product-image', class: 'products'
 %section.well-inset-2.text-center.bg-image.bg-image-4.core-values
   .jumbotron.jumbotron--mod-1
     .container
@@ -49,7 +35,5 @@
         Values
         %small Our mission is profitable growth through superior customer service, innovation, quality and commitment.
       .btn-group-variant.no-offset
-        %a.btn.btn-default.round-xl.btn-sm{:href => "#"} Learn more
-        %a.btn.btn-default.round-xl.btn-sm{:href => "#"} Contact us
-
-
+        %a.btn.btn-default.round-xl.btn-sm{:href => about_us_path } Learn more
+        %a.btn.btn-default.round-xl.btn-sm{:href => contact_us_path } Contact us
