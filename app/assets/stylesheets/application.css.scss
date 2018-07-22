@@ -761,7 +761,7 @@ p {
 .deal-of-day {
   position: relative;
   padding: 120px 0px 100px;
-  background: url(/assets/pattern-one.png) center center no-repeat;
+  background: image-url("/assets/pattern-one.png") center center no-repeat;
   background-size: cover;
 }
 
@@ -775,7 +775,7 @@ p {
   background: rgba(244,238,222,0.94);
 }
 .height-480 {
-  background: url(/assets/image-3.jpg);
+  background: image-url("/assets/image-3.jpg");
   height: 100vh;
 }
 
