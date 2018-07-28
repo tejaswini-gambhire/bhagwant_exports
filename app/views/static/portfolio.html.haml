@@ -1,30 +1,13 @@
 = render 'shared/breadcrumbs', data: nil
 .container
   .row
-    .col-lg-2
-      .blog-side-item
-        .category
-          %h3 Our Products
-          %ul.list-unstyled
-            - @products.each do |product|
-              %li
-                = link_to product[:title], "##{product[:title]}"
-
-    .col-lg-10
-      - @products.each do |product|
-        .blog-item{id: product[:title]}
-          .row
-            .col-lg-10.col-sm-10
-              %h1
-                = link_to product[:title], "#", target: '_blank'
-            .col-lg-5
-              .blog-img.well
-                %a{href: "#", target: '_blank'}
-                  = image_tag "portfolio/#{product[:image]}", alt: "Screenshot of #{product[:title]}"
-          .row
-            .col-md-12
-              %br
-              %p= raw product[:description]
-              %a.pull-right{:href => "#"}
-                %i.icon-arrow-up{'data-toggle'=> 'tooltip', title: 'To top', 'data-placement'=> 'top'}
+    - @products.each do |product|
+      .col-md-4.product-details
+        .thumbnail
+          = image_tag "portfolio/#{product[:image]}", alt: "Screenshot of #{product[:title]}", class: 'product-thumbnail'
+          .caption
+            %h3= product[:title]
+            %p
+            %p
+              %a.btn.btn-primary{:href => contact_us_path, :role => "button", :target => '_blank'} Enquiry
 

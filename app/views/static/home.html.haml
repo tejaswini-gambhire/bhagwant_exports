@@ -10,10 +10,9 @@
         %br.visible-xl-inline/
         solid background. You can find real proof reading more about our company.
       .btn-group-variant
-        %a.btn.btn-default.round-xl.btn-sm{ :href => portfolio_path } SEE ALL PRODUCTS
-        %a.btn.btn-default.round-xl.btn-sm{ :href => about_us_path } ABOUT US
+        %a.btn.btn-default.round-xl.btn-sm{ :href => about_us_path } About Us
 
-%section.deal-of-day
+%section.well-inset-2.text-center.deal-of-day
   .container
     .row
       .col-lg-6.col-lg-offset-3.text-center
@@ -21,12 +20,23 @@
         %p.lead
           We offer 100% organic, natural and best quality products.
     .row.offset-1.flow-offset-2
-      - @products.each do |product|
-        .col-sm-12.col-md-4.product-image
-          .thumbnail.thumbnail-4.pricing-box.pricing-box-2
-            .caption
-              %h6.text-uppercase.letter-spacing-1= product[:title]
-            = image_tag "portfolio/#{product[:image]}", alt: "#{product[:title]}", id: 'current-product-image', class: 'products'
+      .col-sm-12.col-md-4.product-image
+        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
+          .caption
+            %h6.text-uppercase.letter-spacing-1 custard apple
+          = image_tag "portfolio/custard-apple.jpg", alt: "custard apple", id: 'current-product-image', class: 'products'
+      .col-sm-12.col-md-4.product-image
+        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
+          .caption
+            %h6.text-uppercase.letter-spacing-1 pomegranate
+          = image_tag "portfolio/pomegranate.jpg", alt: "pomegranate", id: 'current-product-image', class: 'products'
+      .col-sm-12.col-md-4.product-image
+        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
+          .caption
+            %h6.text-uppercase.letter-spacing-1 onion
+          = image_tag "portfolio/onion.jpg", alt: "onion", id: 'current-product-image', class: 'products'
+    .jumbotron
+      %a.btn.btn-primary.round-xl.btn-sm{ :href => portfolio_path } View More
 %section.well-inset-2.text-center.bg-image.bg-image-4.core-values
   .jumbotron.jumbotron--mod-1
     .container
@@ -35,5 +45,4 @@
         Values
         %small Our mission is profitable growth through superior customer service, innovation, quality and commitment.
       .btn-group-variant.no-offset
-        %a.btn.btn-default.round-xl.btn-sm{:href => about_us_path } Learn more
-        %a.btn.btn-default.round-xl.btn-sm{:href => contact_us_path } Contact us
+        %a.btn.btn-default.round-xl.btn-sm.contact-btn{:href => contact_us_path } Contact us
