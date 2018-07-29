@@ -8,7 +8,7 @@
           %span.icon-bar
         .row{:style => "margin-top: 0px;"}
           %a.navbar-brand.pull-left{:href => root_path}
-            = image_tag 'logo2.png', alt: 'Bhagwant Export'
+            = image_tag 'bhagwant-exports-logo.jpg', alt: 'Bhagwant Export', style: "width: 180px;"
       .navbar-collapse.collapse
         %ul.nav.navbar-nav
           %li{class: "#{check_if_active('/')}"}
@@ -17,8 +17,8 @@
           %li{class: "#{check_if_active('/portfolio')}"}
             = link_to 'Our Products', portfolio_path
 
-          %li{class: "#{check_if_active('/contact-us')} "}
+          %li{class: "#{check_if_active('/contact-us')}"}
             = link_to 'Contact Us', new_contact_path
 
-          %li{class: "#{check_if_active('/open-source')}"}
+          %li{class: "#{check_if_active('/about-us')}"}
             = link_to 'About Us', about_us_path
