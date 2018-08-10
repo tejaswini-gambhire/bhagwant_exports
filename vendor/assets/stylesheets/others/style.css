@@ -7,7 +7,7 @@ Website: http://thevectorlab.net/
 
 /* Import fonts */
 
-/*colors as in josh logo
+/*colors
 dark-red #D3403C
 darker-red #9D2322
 darkest-red #6B1809
@@ -15,7 +15,6 @@ darkest-red #6B1809
 
 body {
   color: #797979;
-  font-family: 'Open Sans', sans-serif !important;
   padding: 0px !important;
   margin: 0px !important;
   font-size:15px;
@@ -35,16 +34,12 @@ a, a:hover, a:focus {
   color: #fff;
 }
 
-h1,h2,h3,h4,h5,h6 {
-  font-family: 'Open Sans', sans-serif;
-}
-
 a {
-  color: #444e67;
+  color: #75992e;
 }
 
 a:hover {
-  color: #f77b6f;
+  color: #75992e;
 }
 
 p {line-height: 22px}
@@ -73,7 +68,6 @@ p {line-height: 22px}
 }
 
 .navbar-brand img{
-  /*width: 250px; /*josh logo image width in header.*/
 }
 
 .header-frontend .navbar-collapse  ul.navbar-nav {
@@ -236,7 +230,6 @@ p {line-height: 22px}
   font-weight: 300;
   text-transform: uppercase;
   margin-top: 0;
-  font-family: 'Fjalla One', sans-serif;
 }
 
 .feature-head p{
@@ -300,7 +293,6 @@ p {line-height: 22px}
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 400;
-  font-family: 'Fjalla One', sans-serif;
 }
 
 .f-text {
@@ -330,7 +322,6 @@ p {line-height: 22px}
   font-size: 20px;
   margin: 0 0 5px 0;
   text-transform: uppercase;
-  font-family: 'Fjalla One', sans-serif;
 }
 .quote-info p {
   color: #9eb3c4;
@@ -344,7 +335,6 @@ p {line-height: 22px}
   font-size: 20px;
   font-weight: 400;
   text-transform: uppercase;
-  font-family: 'Fjalla One', sans-serif;
 }
 
 .accordion {
@@ -805,7 +795,6 @@ ul.about-flex-slides {
   font-size: 24px;
   font-weight: 400;
   margin-bottom: 20px;
-  font-family: 'Fjalla One', sans-serif;
 }
 
 .bx-wrapper {
@@ -970,7 +959,6 @@ ul.about-flex-slides {
   font-weight: 600;
   margin: 3px 0 0;
   text-transform: uppercase;
-  font-family: 'Fjalla One', sans-serif;
 }
 
 /*contact*/
@@ -988,7 +976,6 @@ ul.about-flex-slides {
   color: #475168;
   text-transform: uppercase;
   margin-bottom: 20px;
-  font-family: 'Fjalla One', sans-serif;
 }
 
 /*about us*/
@@ -1064,7 +1051,6 @@ ul.about-flex-slides {
 .about h3 {
   /*text-transform: uppercase;*/
   color: #475168;
-  font-family: 'Fjalla One', sans-serif;
   margin-top: 0;
 }
 
@@ -1093,7 +1079,6 @@ ul.about-flex-slides {
   margin-top: 0;
   color: #475168;
   font-size: 20px;
-  font-family: 'Fjalla One', sans-serif;
 }
 
 .media h3 {
@@ -1154,7 +1139,6 @@ ul.about-flex-slides {
   margin-bottom: 25px;
   color: #47506a;
   font-size: 20px;
-  font-family: 'Fjalla One', sans-serif;
 }
 
 /*team*/
@@ -1444,7 +1428,6 @@ ul.tagg li {
   font-weight: 400;
   margin-top: 0;
   margin-bottom: 20px;
-  /* font-family: 'Fjalla One', sans-serif; */
 }
 
 
@@ -1531,12 +1514,10 @@ ul.tagg li {
   font-size: 20px;
   text-transform: uppercase;
   font-weight: 400;
-  font-family: 'Fjalla One', sans-serif;
 }
 
 .footer_nav_links a{
   color: white;
-  font-family: "Open Sans";
   margin-right: 1%;
   margin-left: 1%;
 }
@@ -1568,7 +1549,6 @@ ul.tagg li {
   color:#F77B6F;
   text-transform: uppercase;
   font-size:35px;
-  font-family: 'Fjalla One', sans-serif;
 }
 
 .slide_subtitle {
@@ -1918,7 +1898,6 @@ ul#filters > .active > span {
   margin-bottom: 50px;
 }
 
-/*styles overridden by josh*/
 
 .logo_width {
   width: 150px;
