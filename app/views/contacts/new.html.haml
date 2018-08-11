@@ -20,6 +20,9 @@
           %dt.h6 E-MAIL
           %dd
             %a{:href => "mailto:bhagwantexports@gmail.com"} bhagwantexports@gmail.com
+          %dt.h6 FOUNDER
+          %dd
+            Mr. Mayur M Jadhav
         %ul.list-inline.list-inline-3
           %li
             %a.material-design-facebook56{:href => "#"}
@@ -52,8 +55,8 @@
               %label{:for => "phone"} Phone
               = f.text_field :phone, class: "form-control #{any_errors(@contact, 'phone')}", id: 'phone', placeholder: 'Enter your phone number'
             .form-group.col-sm-6
-              %label{:for => "skype_id"} Skype ID
-              = f.text_field :skype_id, class: "form-control #{any_errors(@contact, 'skype_id')}", id: 'skype_id', placeholder: 'Enter your Skype ID'
+              %label{:for => "skype_id"} Messanger ID
+              = f.text_field :skype_id, class: "form-control #{any_errors(@contact, 'skype_id')}", id: 'skype_id', placeholder: 'Enter your Messanger ID'
           .row
             .form-group.col-sm-12
               %label{:for => "phone"} Message
