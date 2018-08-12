@@ -4,9 +4,9 @@ class StaticController < ApplicationController
 
   def portfolio
     @products = PRODUCTS.select { |p| p[:display] }
-    @keywords = "Products"
-    @description = ""
-    @title = 'Our Products | Bhagwant Export'
+    @keywords = "fruits vegetables grains"
+    @description = "Leading exportes of fruits vegetables and grains"
+    @title = 'Bhagwant Export | Our Products'
   end
 
   def team
@@ -14,7 +14,8 @@ class StaticController < ApplicationController
 
   def home
     @products = PRODUCTS.select { |p| p[:display] }
-    @title = "Bhagwant Export"
+    @title = "Leading exporters of fresh fruits and vegetables | Bhagwant Export"
+    @keywords = "Bhagwant Export"
   end
 
   def ping
@@ -22,11 +23,14 @@ class StaticController < ApplicationController
   end
 
   def contact_us
-    @title = 'Contact Us | Bhagwant Export'
+    @title = 'Bhagwant Export | Contact Us'
+    @keywords = "Bhagwant Export"
+    @description = "Contact Us at Bhagwant export for fresh organic farm grown products"
   end
 
   def about_us
-    @title = 'About Us | Bhagwant Export'
+    @title = 'Fruits and vegetables exporters | About Us'
+    @keywords = "Bhagwant export | fresh fruits vegetables exporters in indina"
   end
 
   def thankyou
