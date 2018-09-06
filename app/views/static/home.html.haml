@@ -49,8 +49,8 @@
         %h1 Our Products
         %p.lead
           We at bhagwant export offer variety of products which are 100% organic, natural and best quality products.
-    .row
-      .col-md-4
+    .row.offset-1.flow-offset-2
+      .col-sm-12.col-md-4
         .item-fruit-cat1
           %h2.title18.color2.text-uppercase.font-bold.text-center.product-category fruits & vegetables
           .title18.line-space.color.text-center
@@ -76,7 +76,7 @@
               %li
                 %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
                 green chilli
-      .col-md-4
+      .col-sm-12.col-md-4
         .item-fruit-cat1
           %h2.title18.color2.text-uppercase.font-bold.text-center.product-category seeds & powders
           .title18.line-space.color.text-center
@@ -92,11 +92,11 @@
                 tamarind seeds
               %li
                 %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
-                soyabeans
+                soya bean
               %li
                 %span.glyphicon.glyphicon-chevron-right{"aria-hidden" => "true"}
                 tamarind kernel powder
-      .col-md-4
+      .col-sm-12.col-md-4
         .item-fruit-cat1
           %h2.title18.color2.text-uppercase.font-bold.text-center.product-category Grains
           .title18.line-space.color.text-center
@@ -116,13 +116,13 @@
     .row.offset-1.flow-offset-2
       .col-sm-12.col-md-4.product-image
         .thumbnail.thumbnail-4.pricing-box.pricing-box-2
-          = image_tag "portfolio/custard-apple.jpg", alt: "custard apple", id: 'current-product-image', class: 'products'
-      .col-sm-12.col-md-4.product-image
-        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
-          = image_tag "portfolio/pomegranate.jpg", alt: "pomegranate", id: 'current-product-image', class: 'products'
-      .col-sm-12.col-md-4.product-image
-        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
           = image_tag "portfolio/onion.jpg", alt: "onion", id: 'current-product-image', class: 'products'
+      .col-sm-12.col-md-4.product-image
+        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
+          = image_tag "portfolio/soybeans.jpg", alt: "soybeans", id: 'current-product-image', class: 'products'
+      .col-sm-12.col-md-4.product-image
+        .thumbnail.thumbnail-4.pricing-box.pricing-box-2
+          = image_tag "portfolio/maize.jpg", alt: "maize", id: 'current-product-image', class: 'products'
     .jumbotron
       %a.btn.btn-primary.round-xl.btn-sm{ :href => portfolio_path } View More
 %section.well-inset-2.text-center.bg-image.bg-image-4.core-values

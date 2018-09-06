@@ -34,8 +34,6 @@
       %h4 Send an Enquiry
       .contact-form
         = form_for @contact, url: contact_us_path, method: :post do |f|
-          = f.hidden_field :ip
-          = f.hidden_field :location
           .row
             .form-group.col-sm-6
               %label{:for => "name"} Name
@@ -54,9 +52,6 @@
             .form-group.col-sm-6
               %label{:for => "phone"} Phone
               = f.text_field :phone, class: "form-control #{any_errors(@contact, 'phone')}", id: 'phone', placeholder: 'Enter your phone number'
-            .form-group.col-sm-6
-              %label{:for => "skype_id"} Messanger ID
-              = f.text_field :skype_id, class: "form-control #{any_errors(@contact, 'skype_id')}", id: 'skype_id', placeholder: 'Enter your Messanger ID'
           .row
             .form-group.col-sm-12
               %label{:for => "phone"} Message
