@@ -1,10 +1,10 @@
 #background-carousel
-  #myCarousel.carousel.slide{"data-ride" => "carousel"}
+  .carousel.slide#myCarousel{"data-ride" => "carousel"}
     %ol.carousel-indicators
-      %li.active{"data-slide-to" => "0", "data-target" => "#carousel1"}
-      %li{"data-slide-to" => "1", "data-target" => "#carousel2"}
-      %li{"data-slide-to" => "2", "data-target" => "#carousel3"}
-      %li{"data-slide-to" => "3", "data-target" => "#carousel4"}
+      %li.active{"data-slide-to" => "0", "data-target" => "#myCarousel"}
+      %li{"data-slide-to" => "1", "data-target" => "#myCarousel"}
+      %li{"data-slide-to" => "2", "data-target" => "#myCarousel"}
+      %li{"data-slide-to" => "3", "data-target" => "#myCarousel"}
     .carousel-inner.height-480{:role=>"listbox"}
       .item.active{:style=>"background-image:url(/assets/onion1.jpg)", :id=>"carousel1"}
         .jumbotron.text-right
@@ -21,7 +21,7 @@
         .jumbotron
           %h1
             %small
-              The agri products traders and exporters
+              The agri products traders, exporters, importers
               %br.visible-xl-inline/
               Export import facilitators
           %p.big
@@ -35,11 +35,10 @@
           %h1
             %span Our Services
             %small
-              Production of fruits and vegetables
+              Export fresh fruits, vegetables etc from India
               %br.visible-xl-inline/
-              Packaging of fruits, vegetables and processed products
+              Importers of Fruits and Vegetables in Al Aweer Market Dubai
               %br.visible-xl-inline/
-              Quality control and assurance
           .btn-group-variant
             %a.btn.btn-default.round-xl.btn-sm{ :href => portfolio_path } See All Products
       .item{:style=>"background-image:url(/assets/pulses.jpg)", :id=>"carousel4"}
