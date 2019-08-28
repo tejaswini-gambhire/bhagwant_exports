@@ -89,7 +89,7 @@ Rails.application.configure do
   # Do not dump schema after migrations.
   config.active_record.dump_schema_after_migration = false
 
-  config.action_mailer.default_url_options = { protocol: 'http', host: 'demo.bhagwantexports.com' }
+  config.action_mailer.default_url_options = { protocol: 'http', host: 'bhagwantexports-staging.herokuapp.com' }
 
   config.action_mailer.delivery_method = :smtp
   config.action_mailer.perform_deliveries = true
@@ -98,9 +98,8 @@ Rails.application.configure do
     address: 'smtp.sendgrid.net',
     port: 587,
     domain: 'http://bhagwantexports-staging.herokuapp.com',
-    user_name: ENV['SENDGRID_USERNAME'],
-    password: ENV['SENDGRID_PASSWORD'],
-    authentication: :login,
-    enable_starttls_auto: true
+    user_name: 'apikey',
+    password: ENV['SENDGRID_API_KEY'],
+    authentication: :plain
   }
 end
