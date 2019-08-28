@@ -95,11 +95,11 @@ Rails.application.configure do
   config.action_mailer.perform_deliveries = true
 
   config.action_mailer.smtp_settings = {
-    address: "smtp.gmail.com",
+    address: 'smtp.sendgrid.net',
     port: 587,
-    authentication: "plain",
-    user_name: ENV['USERNAME'],
-    password: ENV['PASSWORD'],
-    enable_starttls_auto: true
+    domain: 'www.bhagwantexport.com',
+    user_name: 'apikey',
+    password: ENV['SENDGRID_API_KEY'],
+    authentication: :plain
   }
 end
